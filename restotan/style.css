@@ -192,6 +192,11 @@ input[type="range"] { width: 100%; accent-color: var(--orange); }
 .rec-body small { color: var(--muted); display: block; }
 .match { height: 6px; background: var(--line); border-radius: 999px; margin-top: 0.4rem; overflow: hidden; }
 .match span { display: block; height: 100%; background: var(--ai-grad); border-radius: 999px; transition: width 1s ease; }
+.hint { color: var(--muted); font-weight: 400; font-size: 0.78rem; }
+.ai-total { margin-top: 0.5rem; font-size: 0.85rem; color: var(--muted); }
+.ai-total b { color: var(--gold); }
+.rec-role { display: inline-block; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--teal); }
+.rec-body small.rec-why { color: var(--text); opacity: 0.85; margin-top: 0.15rem; }
 .rec-score { font-weight: 600; color: var(--teal); font-size: 0.9rem; text-align: right; }
 .rec-score .add-btn { margin-top: 0.3rem; width: 32px; height: 32px; font-size: 1.1rem; }
 
@@ -263,6 +268,13 @@ select:focus, .reserve-form input:focus, .reserve-form textarea:focus { border-c
 .cart-foot { padding: 1.3rem 1.5rem; border-top: 1px solid var(--line); }
 .cart-total { display: flex; justify-content: space-between; margin-bottom: 1rem; font-size: 1.1rem; }
 .cart-total b { color: var(--gold); }
+.checkout-form { display: flex; flex-direction: column; gap: 0.6rem; }
+.checkout-form input, .checkout-form select { width: 100%; padding: 0.65rem 0.9rem; border-radius: 10px; background: var(--bg); border: 1px solid var(--line); color: var(--text); outline: none; font-size: 0.88rem; }
+.checkout-form input:focus, .checkout-form select:focus { border-color: var(--orange); }
+.checkout-form .row { display: grid; grid-template-columns: 1.4fr 1fr; gap: 0.6rem; }
+.checkout-form .btn { margin-top: 0.3rem; }
+.btn:disabled { opacity: 0.6; cursor: wait; transform: none; }
+.form-msg.error { color: #ff6b6b; }
 .overlay { position: fixed; inset: 0; background: rgba(0, 0, 0, 0.6); z-index: 90; opacity: 0; pointer-events: none; transition: opacity 0.3s; }
 .overlay.show { opacity: 1; pointer-events: auto; }
 
