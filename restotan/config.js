@@ -8,6 +8,6 @@
 // Selama masih kosong, website berjalan dalam "mode demo": reservasi & pesanan
 // tidak disimpan ke mana pun.
 window.NUSARASA_CONFIG = {
-  supabaseUrl: "",
-  supabaseKey: "",
+  supabaseUrl: "https://tolublbqxmknxuvmtlyd.supabase.co",
+  supabaseKey: "sb_publishable__85Qu6nwvP0xp2saEFuSzw_oU98Rc1s",
 };
