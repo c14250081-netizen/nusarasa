@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Admin Nusarasa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body class="admin">
+  <!-- LOGIN -->
+  <section class="login-wrap" id="loginView" hidden>
+    <form class="login-card" id="loginForm">
+      <a href="index.html" class="logo">🍽️ Nusa<span>rasa</span></a>
+      <h1>Masuk Admin</h1>
+      <p class="muted">Kelola reservasi dan pesanan restoran.</p>
+      <input type="email" id="loginEmail" placeholder="Email admin" autocomplete="username" required />
+      <input type="password" id="loginPass" placeholder="Kata sandi" autocomplete="current-password" required />
+      <button type="submit" class="btn btn-primary full" id="loginBtn">Masuk</button>
+      <p class="form-msg error" id="loginMsg"></p>
+    </form>
+  </section>
+
+  <!-- DASHBOARD -->
+  <section id="dashView" hidden>
+    <header class="admin-top">
+      <a href="index.html" class="logo">🍽️ Nusa<span>rasa</span> <small>Admin</small></a>
+      <span class="live" id="liveBadge">● Live</span>
+      <div class="admin-user">
+        <span id="userEmail"></span>
+        <button class="btn-ghost" id="refreshBtn" title="Muat ulang data">⟳</button>
+        <button class="btn-ghost" id="logoutBtn">Keluar</button>
+      </div>
+    </header>
+
+    <div class="demo-banner" id="demoBanner" hidden>
+      🧪 <b>Mode demo</b> — data di bawah hanya contoh dan tidak tersimpan. Isi <code>config.js</code> dengan data Supabase agar reservasi &amp; pesanan asli masuk ke sini.
+    </div>
+
+    <main class="admin-main">
+      <div class="stats" id="stats"></div>
+
+      <div class="insight" id="insight"></div>
+
+      <div class="tabs">
+        <button class="tab active" data-tab="reservations">📅 Reservasi <span class="count" id="countRes"></span></button>
+        <button class="tab" data-tab="orders">🛒 Pesanan <span class="count" id="countOrd"></span></button>
+      </div>
+
+      <div class="toolbar">
+        <input type="search" id="search" placeholder="🔍 Cari nama atau nomor..." />
+        <select id="statusFilter"></select>
+        <input type="date" id="dateFilter" title="Filter tanggal" />
+        <button class="btn-ghost" id="todayBtn">Hari ini</button>
+        <button class="btn-ghost" id="allBtn">Semua</button>
+      </div>
+
+      <div class="list" id="list"></div>
+    </main>
+  </section>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>
